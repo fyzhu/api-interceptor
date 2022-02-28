@@ -1,7 +1,7 @@
 {
-  "name": "Ajax Interceptor",
-  "version": "1.2",
-  "description": "To modify response text of ajax requests",
+  "name": "API Interceptor",
+  "version": "1.0.0",
+  "description": "To modify response text of requests",
   "permissions": [
     "storage",
     "tabs",
@@ -13,6 +13,7 @@
     "persistent": true
   },
   "browser_action": {
+    "default_popup": "iframe/index.html"
   },
   "icons": {
     "16": "images/16_gray.png",

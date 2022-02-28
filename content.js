@@ -50,7 +50,7 @@ if (window.self === window.top) {
       iframe.style.setProperty('box-shadow', '0 0 15px 2px rgba(0,0,0,0.12)', 'important');
       iframe.frameBorder = "none"; 
       iframe.src = chrome.extension.getURL("iframe/index.html")
-      document.body.appendChild(iframe);
+      // document.body.appendChild(iframe);
       let show = false;
 
       chrome.runtime.onMessage.addListener((msg, sender) => {
@@ -80,7 +80,7 @@ chrome.runtime.onMessage.addListener(msg => {
 // 接收pageScript传来的信息，转发给iframe
 window.addEventListener("pageScript", function(event) {
   if (iframeLoaded) {
-    chrome.runtime.sendMessage({type: 'ajaxInterceptor', to: 'iframe', ...event.detail});
+    // chrome.runtime.sendMessage({type: 'ajaxInterceptor', to: 'iframe', ...event.detail});
   } else {
     let count = 0;
     const checktLoadedInterval = setInterval(() => {
